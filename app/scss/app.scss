@@ -2,5 +2,10 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "variables";
-@import "components/container";
+@import "global";
+@import "utils";
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "components/contact";
+@import "components/grid";
+@import "components/header";
+@import "components/search";

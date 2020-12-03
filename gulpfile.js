@@ -24,7 +24,7 @@ gulp.task('sprite', function() {
   .pipe(svgSprite({
     mode: {
       stack: {
-        sprite: "../sprite.svg"  //sprite file name
+        sprite: "../sprite.svg"
       }
     }
   }))
@@ -43,8 +43,4 @@ gulp.task('sass', function () {
   return gulp.src('./app/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dist/'));
-});
- 
-gulp.task('sass:watch', function () {
-  gulp.watch('./app/**/*.scss', ['sass']);
 });

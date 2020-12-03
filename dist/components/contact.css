@@ -1,0 +1,17 @@
+.contact:hover {
+  background-color: #007bff;
+  cursor: pointer; }
+
+.contact:hover .contact-name {
+  color: #f8f9fa !important; }
+
+.contact:hover .contact-status {
+  color: !important; }
+
+.contacts-list {
+  border-right: 1px solid #dee2e6;
+  padding-right: 1.5rem; }
+
+.contacts-avatar {
+  margin-top: 21px;
+  margin-bottom: 20px; }

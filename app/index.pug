@@ -8,14 +8,14 @@ html(lang="ru")
   body
     .container-xxl.rounded
       .row
-        .col-4
+        .col-xxl-4.px-4
           include header.pug
           include search.pug
           +header
           +search('Контакты', 'Поиск по контактам')
-          include contacts.pug
+          include contact.pug
           include messages-preview.pug
           include profile.pug
           include chat-mobile.pug
-        .col-8
-          include hello-message-desktop.pug
+        .col-xxl-8.position-fixed.right-0.d-none
+          include avatar.pug
