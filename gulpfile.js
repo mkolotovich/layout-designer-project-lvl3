@@ -8,14 +8,19 @@ var concat = require('gulp-concat');
 var gulpCopy = require('gulp-copy');
 var outputPath = './dist/';
  
-gulp.task('copy', function() {
+gulp.task('copy-with-depth', function() {
   return gulp.src('./app/images/*.jpg')
     .pipe(gulpCopy(outputPath,{ prefix: 1 }))
 });
 
+gulp.task('copy', function() {
+  return gulp.src(['./node_modules/jquery/dist/jquery.min.js','./node_modules/bootstrap/dist/js/bootstrap.min.js'])
+    .pipe(gulp.dest('./dist/js'));
+});
+
 gulp.task('scripts', function() {
-  return gulp.src('./app/*.js')
-    .pipe(concat('all.js'))
+  return gulp.src('./app/js/*.js')
+    .pipe(concat('app.js'))
     .pipe(gulp.dest('./dist/'));
 });
  
@@ -40,7 +45,7 @@ gulp.task('views', function buildHTML() {
 sass.compiler = require('node-sass');
  
 gulp.task('sass', function () {
-  return gulp.src('./app/scss/**/*.scss')
+  return gulp.src('./app/scss/app.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dist/'));
 });

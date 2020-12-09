@@ -8,8 +8,8 @@ body {
 body::-webkit-scrollbar {
   display: none; }
 
-.right-0 {
-  right: 0; }
+.mr-40 {
+  margin-right: 40px; }
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -7900,11 +7900,12 @@ a.text-gray:hover, a.text-gray:focus {
   margin-bottom: 20px; }
 
 .container-xxl {
-  box-shadow: 0 1rem 3rem #EFEFEF; }
+  box-shadow: 0 1rem 3rem #EFEFEF;
+  min-height: 100vh; }
 
 @media (min-width: 1600px) {
   .col-xxl-8 {
-    display: block !important; } }
+    display: flex !important; } }
 
 @media (min-width: 1600px) {
   .header {
@@ -7916,3 +7917,17 @@ a.text-gray:hover, a.text-gray:focus {
 @media (min-width: 1600px) {
   .search {
     border-right: 1px solid #EFEFEF; } }
+
+.avatar {
+  top: 426px; }
+
+.text-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.message-list .contact:hover {
+  color: #FBFBFB !important; }
+
+.message-list .contact:hover .message-time {
+  color: #6C757D !important; }

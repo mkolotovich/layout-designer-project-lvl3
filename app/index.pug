@@ -3,19 +3,22 @@ html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
+    title hexlet-messenger
     link(rel="stylesheet", href="app.css")
   body
     .container-xxl.rounded
       .row
         .col-xxl-4.px-4
-          include header.pug
-          include search.pug
+          include pug/header.pug
+          include pug/search.pug
           +header
           +search('Контакты', 'Поиск по контактам')
-          include contact.pug
-          include messages-preview.pug
-          include profile.pug
-          include chat-mobile.pug
-        .col-xxl-8.position-fixed.right-0.d-none
-          include avatar.pug
+          div(class="tab-content" id="pills-tabContent")
+            include pug/contact.pug
+            include pug/messages-preview.pug
+            include pug/profile.pug
+          include pug/chat-mobile.pug
+        .col-xxl-8.d-none.justify-content-center
+          include pug/avatar.pug
+    script(src="js/jquery.min.js")
+    script(src="js/bootstrap.min.js")
