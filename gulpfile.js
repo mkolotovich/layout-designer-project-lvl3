@@ -7,7 +7,24 @@ var svgSprite = require('gulp-svg-sprite');
 var concat = require('gulp-concat');
 var gulpCopy = require('gulp-copy');
 var outputPath = './dist/';
- 
+var browserSync = require('browser-sync').create();
+var reload      = browserSync.reload;
+
+gulp.task('serve', function() {
+
+  browserSync.init({
+      server: {
+        baseDir: "./dist/"
+      }
+  });
+
+  gulp.watch("./dist/*.html").on('change', reload);
+});
+
+gulp.task('watch', function () {
+  gulp.watch('./app/**/*.pug','./app/**/*.svg', gulp.parallel('views','sprite'));
+});
+
 gulp.task('copy-with-depth', function() {
   return gulp.src('./app/images/*.jpg')
     .pipe(gulpCopy(outputPath,{ prefix: 1 }))
@@ -39,7 +56,8 @@ gulp.task('sprite', function() {
 gulp.task('views', function buildHTML() {
   return gulp.src('./app/*.pug')
   .pipe(pug({}))
-  .pipe(gulp.dest('./dist'));
+  .pipe(gulp.dest('./dist'))
+  .pipe(browserSync.stream());
 });
  
 sass.compiler = require('node-sass');

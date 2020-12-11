@@ -1,27 +1,31 @@
-div.tab-pane.fade(id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab")
-  header
-    img(src="images/avatar_1.jpg", alt="avatar" width="90")
-    p
-      b Кодовёнок Хекслетович
-    p Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
-  ul
-    li
-      p
-        small Страна
-      small Москва, Россия
-      img(src="", alt="")
-    li
-      p
-        small Телефон
-      a(href="tel:+74991234567") +7 (499) 123-45-67
-      img(src="", alt="")
-    li
-      p
-        small Email
-      a(href="mailto:nikita.m@hexlet.io") nikita.m@hexlet.io
-      img(src="", alt="")
-    li
-      p
-        small Twitter
-      a(href="https://twitter.com/n__mikhaylov") @n__mikhaylov
-      img(src="", alt="")
+div.tab-pane.fade.pt-5(id="profile" role="tabpanel" aria-labelledby="pills-contact-tab")
+  div.card.text-center.align-items-center.border-0.py-3.mb-3
+    img(src="images/avatar_1.jpg", alt="avatar" width="90").rounded-circle
+    div.card-body.pt-3.profile-name
+      h6.card-title.font-weight-bold.text-dark.lh-3.mb-3 Кодовёнок Хекслетович
+      p.card-text.text-secondary.opacity-50 Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
+  ul.list-group.py-3
+    li.list-group-item.border-0.profile-contacts-item.pt-0.d-flex.justify-content-between
+      div
+        p.mb-0
+          small.text-secondary.opacity-50 Страна
+        small.text-dark Москва, Россия
+      img.d-none(src="images/icons/sprite.svg#images--icons--globe", width="16" alt="globe")
+    li.list-group-item.border-0.profile-contacts-item.pt-3.d-flex.justify-content-between
+      div
+        p.mb-0
+          small.text-secondary.opacity-50 Телефон
+        a(href="tel:+74991234567").text-dark.small +7 (499) 123-45-67
+      img.d-none(src="images/icons/sprite.svg#images--icons--telephone", width="16" alt="telephone")
+    li.list-group-item.border-0.profile-contacts-item.pt-3.d-flex.justify-content-between
+      div
+        p.mb-0
+          small.text-secondary.opacity-50 Email
+        a(href="mailto:nikita.m@hexlet.io").text-dark.small nikita.m@hexlet.io
+      img.d-none(src="images/icons/sprite.svg#images--icons--envelope", width="16" alt="envelope")
+    li.list-group-item.border-0.profile-contacts-item.pt-3.d-flex.justify-content-between
+      div
+        p.mb-0
+          small.text-secondary.opacity-50 Twitter
+        a(href="https://twitter.com/n__mikhaylov").text-dark.small @n__mikhaylov
+      img.d-none(src="images/icons/sprite.svg#images--icons--people-3", width="16" alt="people")

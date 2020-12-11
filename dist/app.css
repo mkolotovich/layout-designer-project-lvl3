@@ -11,6 +11,12 @@ body::-webkit-scrollbar {
 .mr-40 {
   margin-right: 40px; }
 
+.lh-3 {
+  line-height: 1.5; }
+
+.opacity-50 {
+  opacity: 0.5; }
+
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -7931,3 +7937,19 @@ a.text-gray:hover, a.text-gray:focus {
 
 .message-list .contact:hover .message-time {
   color: #6C757D !important; }
+
+.profile-name {
+  padding-left: 39px;
+  padding-right: 38px;
+  padding-bottom: 52px; }
+
+.profile-contacts-item {
+  padding-left: 12px; }
+  .profile-contacts-item::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #EFEFEF;
+    width: calc(100% - 12px);
+    left: 6px;
+    bottom: 0; }
