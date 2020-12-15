@@ -15,12 +15,6 @@
   }
 }
 
-@include media-breakpoint-up(xxl) {
-  .contacts-list {
-    border-right: 1px solid $border-color;
-    padding-right: 1.5rem;
-  }
-}
 .contacts-avatar {
   margin-top: 21px;
   margin-bottom: 20px;

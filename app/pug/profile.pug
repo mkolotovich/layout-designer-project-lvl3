@@ -1,4 +1,6 @@
-div.tab-pane.fade.pt-5(id="profile" role="tabpanel" aria-labelledby="pills-contact-tab")
+include search.pug
++search('Профиль', 'Поиск по сообщениям', 'pt-5 search mb-5 contacts d-none profile')
+div.tab-pane.fade(id="profile" role="tabpanel" aria-labelledby="pills-contact-tab")
   div.card.text-center.align-items-center.border-0.py-3.mb-3
     img(src="images/avatar_1.jpg", alt="avatar" width="90").rounded-circle
     div.card-body.pt-3.profile-name

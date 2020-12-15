@@ -8,15 +8,6 @@ body {
 body::-webkit-scrollbar {
   display: none; }
 
-.mr-40 {
-  margin-right: 40px; }
-
-.lh-3 {
-  line-height: 1.5; }
-
-.opacity-50 {
-  opacity: 0.5; }
-
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -7896,11 +7887,6 @@ a.text-gray:hover, a.text-gray:focus {
   .contact:hover .contact-status {
     color: #EFEFEF !important; }
 
-@media (min-width: 1600px) {
-  .contacts-list {
-    border-right: 1px solid #EFEFEF;
-    padding-right: 1.5rem; } }
-
 .contacts-avatar {
   margin-top: 21px;
   margin-bottom: 20px; }
@@ -7911,7 +7897,9 @@ a.text-gray:hover, a.text-gray:focus {
 
 @media (min-width: 1600px) {
   .col-xxl-8 {
-    display: flex !important; } }
+    display: flex !important; }
+  .col-xxl-4 {
+    border-right: 1px solid #EFEFEF !important; } }
 
 @media (min-width: 1600px) {
   .header {
@@ -7921,8 +7909,10 @@ a.text-gray:hover, a.text-gray:focus {
   padding-bottom: 20px; }
 
 @media (min-width: 1600px) {
-  .search {
-    border-right: 1px solid #EFEFEF; } }
+  .search .form-control-lg {
+    font-size: 1rem;
+    padding-top: 14px;
+    padding-bottom: 14px; } }
 
 .avatar {
   top: 426px; }
@@ -7953,3 +7943,12 @@ a.text-gray:hover, a.text-gray:focus {
     width: calc(100% - 12px);
     left: 6px;
     bottom: 0; }
+
+.mr-40 {
+  margin-right: 40px; }
+
+.lh-3 {
+  line-height: 1.5; }
+
+.opacity-50 {
+  opacity: 0.5; }

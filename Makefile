@@ -1,2 +1,11 @@
 make deploy:
 	surge dist
+make build:
+	gulp copy-with-depth
+	gulp copy
+	gulp sprite
+	gulp views
+	gulp sass
+make start:
+	make build
+	gulp default

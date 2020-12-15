@@ -1,18 +1,18 @@
 mixin header(link)
-  header.d-flex.border-right.fixed-bottom.header
+  header.d-flex.fixed-bottom.header
     a(href=link)
       img(src="images/icons/sprite.svg#images--icons--logo", alt="logo" width="15")
     nav
       ul.list-inline.nav.nav-pills(id="pills-tab" role="tablist")
         li.list-inline-item.nav-item(role="presentation")
-          a(id="pills-home-tab" data-toggle="pill" href="#contacts" role="tab" aria-controls="pills-home" aria-selected="true").nav-link.active
+          a(id="pills-home-tab" data-toggle="pill" href="#contacts" role="tab" aria-controls="contacts" aria-selected="true").nav-link.active
             img(src="images/icons/sprite.svg#images--icons--people", alt="contacts" width="25")
             |Контакты
         li.list-inline-item.nav-item(role="presentation")
-          a(id="pills-profile-tab" data-toggle="pill" href="#chats" role="tab" aria-controls="pills-profile" aria-selected="false").nav-link
+          a(id="pills-profile-tab" data-toggle="pill" href="#chats" role="tab" aria-controls="chats" aria-selected="false").nav-link
             img(src="images/icons/sprite.svg#images--icons--chat", alt="messages" width="25")
             |Сообщения
         li.list-inline-item.nav-item(role="presentation")
-          a(id="pills-contact-tab" data-toggle="pill" href="#profile" role="tab" aria-controls="pills-contact" aria-selected="false").nav-link
-            img(src="images/icons/sprite.svg#images--icons--person", alt="profile" width="18.75")
+          a(id="pills-contact-tab" data-toggle="pill" href="#profile" role="tab" aria-controls="profile" aria-selected="false").nav-link
+            img(src="images/icons/sprite.svg#images--icons--person", alt="profile" width="19")
             |Профиль

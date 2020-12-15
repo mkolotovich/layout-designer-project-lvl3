@@ -2,7 +2,9 @@
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
 @include media-breakpoint-up(xxl) {
-  .search {
-    border-right: 1px solid $border-color;
+  .search .form-control-lg{
+    font-size: 1rem;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 }

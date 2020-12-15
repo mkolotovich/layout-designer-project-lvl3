@@ -10,9 +10,8 @@ html(lang="ru")
       .row
         .col-xxl-4.px-4
           include pug/header.pug
-          include pug/search.pug
           +header
-          +search('Контакты', 'Поиск по контактам')
+          - var component
           div(class="tab-content" id="pills-tabContent")
             include pug/contact.pug
             include pug/messages-preview.pug
@@ -22,3 +21,4 @@ html(lang="ru")
           include pug/avatar.pug
     script(src="js/jquery.min.js")
     script(src="js/bootstrap.min.js")
+    script(src="js/index.js")

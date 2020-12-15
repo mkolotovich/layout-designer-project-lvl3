@@ -3,7 +3,6 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "variables";
 @import "global";
-@import "utils";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "components/contact";
 @import "components/grid";
@@ -12,3 +11,4 @@
 @import "components/avatar";
 @import "components/messages-preview";
 @import "components/profile";
+@import "utils";

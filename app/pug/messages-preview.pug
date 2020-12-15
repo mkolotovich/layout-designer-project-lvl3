@@ -1,4 +1,6 @@
-ul.list-unstyled.contacts-list.message-list.tab-pane.fade.pt-5(id="chats" role="tabpanel" aria-labelledby="pills-profile-tab")
+include search.pug
++search('Чаты', 'Поиск по сообщениям', 'pt-5 search mb-5 contacts message d-none')
+ul.list-unstyled.contacts-list.message-list.tab-pane.fade(id="chats" aria-labelledby="pills-profile-tab")
   li.d-flex.flex-column.pb-3
     a(class="d-flex text-decoration-none align-items-center text-secondary contact" href="chat.html")
       img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
@@ -22,4 +24,4 @@ ul.list-unstyled.contacts-list.message-list.tab-pane.fade.pt-5(id="chats" role="
         div.d-flex.justify-content-between
           b.text-dark.contact-name  Алексей Примадонин
           small.message-time 08:53
-        small.contact-status Тесты упали >_<
+        small.contact-status Тесты упали >_&lt;

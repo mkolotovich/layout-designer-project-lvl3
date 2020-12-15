@@ -1,5 +1,5 @@
-mixin search(name, placeholder)
-  aside.pt-5.search
-    h2.mb-0=name
-    form(action="").pt-4.pr-4
-      input(type="text" placeholder=placeholder)
+mixin search(name, placeholder, classes)
+  form(class=classes)
+    .form-group
+      label.h2.d-block=name
+        input(type="search" placeholder=placeholder class="pl-4 border-top-0 border-right-0 border-left-0 form-control form-control-lg mt-4 shadow-none")
