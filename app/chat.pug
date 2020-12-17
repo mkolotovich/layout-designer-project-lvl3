@@ -6,10 +6,9 @@ html(lang="ru")
     title hexlet-messenger
     link(rel="stylesheet", href="app.css")
   body
-    .container-xxl.rounded
+    .container-xxl.radius-xxl.mt-xxl-4.mb-xxl-4
       .row
-        .col-4
-          - var page = 'chat'
+        .col-4.border-xxl-right
           include pug/header.pug
           include pug/search.pug
           +header('index.html')

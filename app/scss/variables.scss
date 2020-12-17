@@ -8,7 +8,7 @@ $theme-colors: (
   "danger": #DC3545,
   "light": #FBFBFB,
   "dark": #343A40
-);
+); 
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -28,3 +28,16 @@ $border-color: theme-color("gray");
 $border-radius: 1rem;
 $enable-shadows: true;
 $font-family-sans-serif: 'Roboto', sans-serif;
+$radius: (
+  -left-top: border-top-left-radius,
+  -left: (border-top-left-radius, border-bottom-left-radius),
+  -right: (border-top-right-radius, border-bottom-right-radius),
+  "": border-radius
+);
+$border: (
+  -top: border-top,
+  -right: border-right,
+  -bottom: border-bottom,
+  -left: border-left,
+  "": border
+);

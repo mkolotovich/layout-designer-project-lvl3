@@ -1,38 +1,18 @@
-if page != 'chat'
-  ul.d-none
-    li.d-flex
-      img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50")
-      div
-        b Вениамин Редакторович
-        p Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?
-        hr
-        small 8 минут назад
-    li.d-flex
-      img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50")
-      div
-        p Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?
-        hr
-        small 8 минут назад
-  form.d-none
-    input(type="text" placeholder="Напишите сообщение...")
-    button(type="submit")
-      img(src="images/icons/sprite.svg#images--icons--cursor", alt="submit" width="21")
-else
-  ul.border-right
-    li.d-flex
-      img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50")
-      div
-        b Вениамин Редакторович
-        p Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?
-        hr
-        small 8 минут назад
-    li.d-flex
-      img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50")
-      div
-        p Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?
-        hr
-        small 8 минут назад
-  form(action="")
-    input(type="text" placeholder="Напишите сообщение...")
-    button(type="submit")
-      img(src="images/icons/sprite.svg#images--icons--cursor", alt="submit" width="20.59")
+ul.border-right
+  li.d-flex.rounded
+    img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50").rounded-circle
+    div
+      b Вениамин Редакторович
+      p Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?
+      hr
+      small 8 минут назад
+  li.d-flex.rounded
+    img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50").rounded-circle
+    div
+      p Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?
+      hr
+      small 8 минут назад
+form(action="")
+  input(type="text" placeholder="Напишите сообщение...")
+  button(type="submit").rounded-circle
+    img(src="images/icons/sprite.svg#images--icons--cursor", alt="submit" width="20.59")
