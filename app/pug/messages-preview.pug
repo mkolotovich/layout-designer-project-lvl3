@@ -1,27 +1,29 @@
 include search.pug
-+search('Чаты', 'Поиск по сообщениям', 'pt-5 search mb-5 contacts message d-none')
-ul.list-unstyled.contacts-list.message-list.tab-pane.fade(id="chats" aria-labelledby="pills-profile-tab")
-  li.d-flex.flex-column.pb-3
-    a(class="d-flex text-decoration-none align-items-center text-secondary contact" href="chat.html")
-      img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
-      div.pl-4.text-hidden.flex-grow-1.mr-40
-        div.d-flex.justify-content-between
-          b.text-dark.contact-name Вениамин Редакторович
-          small.message-time 11:45
-        small.contact-status o_O
-  li.d-flex.flex-column.pb-3
-    a(class="d-flex text-decoration-none align-items-center text-secondary contact" href="chat.html")
-      img(src="images/avatar_2.jpg", alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
-      div.pl-4.text-hidden.flex-grow-1.mr-40
-        div.d-flex.justify-content-between
-          b.text-dark.contact-name  Джедай Падаванов
-          small.message-time 10:12
-        small.contact-status Привет, скоро третий проект? Уже скоро надо будет выложить
-  li.d-flex.flex-column.pb-3
-    a(class="d-flex text-decoration-none align-items-center text-secondary contact" href="chat.html")
-      img(src="images/avatar_3.jpg", alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
-      div.pl-4.text-hidden.flex-grow-1.mr-40
-        div.d-flex.justify-content-between
-          b.text-dark.contact-name  Алексей Примадонин
-          small.message-time 08:53
-        small.contact-status Тесты упали >_&lt;
+mixin messages-preview(classes, id)
+  ul(class=classes id=id role="tablist")
+    li
+      +search('Чаты', 'Поиск по сообщениям', 'pt-5 search mb-5 contacts message')
+    li.d-flex.flex-column.pb-3.nav-item(role="presentation")
+      a(class="d-flex text-decoration-none align-items-center text-secondary contact nav-link" id="v-pills-home-tab" href="chat.html" role="tab" aria-controls="v-pills-home" aria-selected="true")
+        img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
+        div.pl-4.text-hidden.flex-grow-1.mr-40
+          div.d-flex.justify-content-between
+            b.text-dark.contact-name Вениамин Редакторович
+            small.message-time 11:45
+          small.contact-status o_O
+    li.d-flex.flex-column.pb-3.nav-item(role="presentation")
+      a(class="d-flex text-decoration-none align-items-center text-secondary contact nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false")
+        img(src="images/avatar_2.jpg", alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
+        div.pl-4.text-hidden.flex-grow-1.mr-40
+          div.d-flex.justify-content-between
+            b.text-dark.contact-name  Джедай Падаванов
+            small.message-time 10:12
+          small.contact-status Привет, скоро третий проект? Уже скоро надо будет выложить
+    li.d-flex.flex-column.pb-3.nav-item(role="presentation")
+      a(class="d-flex text-decoration-none align-items-center text-secondary contact nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-profile" aria-selected="false")
+        img(src="images/avatar_3.jpg", alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
+        div.pl-4.text-hidden.flex-grow-1.mr-40
+          div.d-flex.justify-content-between
+            b.text-dark.contact-name  Алексей Примадонин
+            small.message-time 08:53
+          small.contact-status Тесты упали >_&lt;

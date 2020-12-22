@@ -3,5 +3,8 @@
 @import "../../../node_modules/bootstrap/scss/mixins";
 .container-xxl {
   @include box-shadow(0 1rem 3rem theme-color("gray"));
-  min-height: calc(100vh - 3rem);
+  @include media-breakpoint-up(xxl) {
+    min-height: calc(100vh - 3rem);
+  }
+  min-height:100vh;
 }

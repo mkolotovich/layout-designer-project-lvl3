@@ -33,7 +33,7 @@ gulp.task('copy-with-depth', function() {
 });
 
 gulp.task('copy', function() {
-  return gulp.src(['./node_modules/jquery/dist/jquery.min.js','./node_modules/bootstrap/dist/js/bootstrap.min.js', './app/js/index.js'])
+  return gulp.src(['./node_modules/jquery/dist/jquery.min.js','./node_modules/bootstrap/dist/js/bootstrap.min.js'])
     .pipe(gulp.dest('./dist/js'));
 });
 

@@ -10,14 +10,14 @@ html(lang="ru")
       .row
         .col-xxl-4.px-4.border-xxl-right
           include pug/header.pug
-          +header
-          - var component
+          +header('','d-flex fixed-bottom header radius-xxl-left-top')
           div(class="tab-content" id="pills-tabContent")
             include pug/contact.pug
+            +contacts('tab-pane fade show active')
             include pug/messages-preview.pug
+            +messages-preview('list-unstyled contacts-list message-list tab-pane fade','chats') 
             include pug/profile.pug
         .col-xxl-8.d-none.justify-content-center.d-xxl-flex
           include pug/avatar.pug
     script(src="js/jquery.min.js")
     script(src="js/bootstrap.min.js")
-    script(src="js/index.js")

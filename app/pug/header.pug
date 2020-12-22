@@ -1,11 +1,15 @@
-mixin header(link)
-  header.d-flex.fixed-bottom.header.radius-xxl-left-top 
+mixin header(link, classes)
+  header(class=classes)
     a(href=link)
       img(src="images/icons/sprite.svg#images--icons--logo", alt="logo" width="15")
     nav
       ul.list-inline.nav.nav-pills(id="pills-tab" role="tablist")
+        if page == 'chat'
+          li.list-inline-item.nav-item.d-xxl-none(role="presentation")
+            a(id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="contacts" aria-selected="true").nav-link
+              img(src="images/icons/sprite.svg#images--icons--chat-left-text", alt="chat" width="25")
         li.list-inline-item.nav-item(role="presentation")
-          a(id="pills-home-tab" data-toggle="pill" href="#contacts" role="tab" aria-controls="contacts" aria-selected="true").nav-link.active
+          a(id="pills-home-tab" data-toggle="pill" href="#contacts" role="tab" aria-controls="contacts" aria-selected="true").nav-link
             img(src="images/icons/sprite.svg#images--icons--people", alt="contacts" width="25")
             |Контакты
         li.list-inline-item.nav-item(role="presentation")

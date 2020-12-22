@@ -1,13 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-y: auto;
-  overflow-x: hidden; }
-
-body::-webkit-scrollbar {
-  display: none; }
-
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -7891,9 +7882,24 @@ a.text-gray:hover, a.text-gray:focus {
   margin-top: 21px;
   margin-bottom: 20px; }
 
+@media (min-width: 1600px) {
+  .contacts-list {
+    height: 67vh;
+    overflow: auto; }
+    .contacts-list {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow-y: auto;
+      overflow-x: hidden; }
+    .contacts-list::-webkit-scrollbar {
+      display: none; } }
+
 .container-xxl {
   box-shadow: 0 1rem 3rem #EFEFEF;
-  min-height: calc(100vh - 3rem); }
+  min-height: 100vh; }
+  @media (min-width: 1600px) {
+    .container-xxl {
+      min-height: calc(100vh - 3rem); } }
 
 @media (min-width: 1600px) {
   .header {
@@ -7937,6 +7943,24 @@ a.text-gray:hover, a.text-gray:focus {
     width: calc(100% - 12px);
     left: 6px;
     bottom: 0; }
+
+.messages {
+  padding-left: 33px;
+  height: 67vh; }
+  .messages {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: auto;
+    overflow-x: hidden; }
+  .messages::-webkit-scrollbar {
+    display: none; }
+
+.chat-message {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08); }
+
+.chat-btn {
+  width: 42px;
+  height: 42px; }
 
 .mr-40 {
   margin-right: 40px; }

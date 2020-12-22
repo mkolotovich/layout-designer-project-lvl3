@@ -1,0 +1,12 @@
+.messages {
+  padding-left: 33px;
+  height: 67vh;
+  @include hide-scrollbar;
+}
+.chat-message {
+  @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.08));
+}
+.chat-btn {
+  width: 42px;
+  height: 42px;
+}

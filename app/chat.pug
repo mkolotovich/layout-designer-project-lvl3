@@ -8,11 +8,19 @@ html(lang="ru")
   body
     .container-xxl.radius-xxl.mt-xxl-4.mb-xxl-4
       .row
-        .col-4.border-xxl-right
+        .col-xxl-4.border-xxl-right
           include pug/header.pug
-          include pug/search.pug
-          +header('index.html')
-          include pug/messages-preview.pug
-        .col-8
-          include pug/header-chat.pug
-          include pug/chat-mobile.pug
+          - var page = "chat"
+          +header('index.html', 'd-flex fixed-bottom header radius-xxl-left-top')
+          div(class="tab-content" id="pills-tabContent")
+            include pug/contact.pug
+            +contacts('tab-pane fade')
+            include pug/messages-preview.pug
+            +messages-preview('list-unstyled contacts-list message-list tab-pane fade show active','chats')
+            include pug/profile.pug
+            include pug/chat-mobile.pug
+            +chat-mobile('tab-content d-xxl-none tab-pane fade', "pills-home", "pills-profile", "pills-messages")
+        .col-xxl-8.d-none.d-xxl-block
+          +chat-mobile('tab-content', "v-pills-home", "v-pills-profile", "v-pills-messages")
+    script(src="js/jquery.min.js")
+    script(src="js/bootstrap.min.js")
