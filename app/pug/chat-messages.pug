@@ -1,0 +1,8 @@
+mixin chat-messages(image,classes,name,message,time)
+  li.d-flex.mb-3
+    img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50").rounded-circle.d-xxl-block.d-none
+    div(class=classes)
+      b.text-dark=name
+      p.text-dark.mb-2=message
+      hr.mt-0.mb-1.border-light
+      small.text-light=time

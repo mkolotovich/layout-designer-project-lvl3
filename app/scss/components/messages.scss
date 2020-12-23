@@ -1,6 +1,6 @@
 .messages {
   padding-left: 33px;
-  height: 67vh;
+  max-height: 613px;
   @include hide-scrollbar;
 }
 .chat-message {

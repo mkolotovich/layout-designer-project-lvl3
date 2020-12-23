@@ -1,9 +1,9 @@
 mixin header(link, classes)
   header(class=classes)
-    a(href=link)
+    a(href=link).pt-4
       img(src="images/icons/sprite.svg#images--icons--logo", alt="logo" width="15")
     nav
-      ul.list-inline.nav.nav-pills(id="pills-tab" role="tablist")
+      ul.list-inline.nav.nav-pills.align-items-center(id="pills-tab" role="tablist")
         if page == 'chat'
           li.list-inline-item.nav-item.d-xxl-none(role="presentation")
             a(id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="contacts" aria-selected="true").nav-link

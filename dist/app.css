@@ -7946,7 +7946,7 @@ a.text-gray:hover, a.text-gray:focus {
 
 .messages {
   padding-left: 33px;
-  height: 67vh; }
+  max-height: 613px; }
   .messages {
     -ms-overflow-style: none;
     scrollbar-width: none;
