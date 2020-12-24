@@ -4,7 +4,7 @@
 
     @each $class, $value in $border {
       .border#{$infix}#{$class} {
-        #{$value}: 1px solid $border-color !important; 
+        #{$value}: 1px solid $border-color !important;
       }
     }
   }

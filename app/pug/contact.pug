@@ -38,13 +38,13 @@
 - var count = 0;
 include search.pug
 mixin contacts(classes)
-  div(class=classes id="contacts" aria-labelledby="pills-home-tab")
+  div(class=classes id="contacts")
     +search('Контакты', 'Поиск по контактам','pt-5 search mb-5 contacts')
-    ul(class="list-unstyled contacts-list" id="contacts" aria-labelledby="pills-home-tab")
+    ul(class="list-unstyled contacts-list")
       each val, key in contacts
         each value in val
           li.d-flex.flex-column
-            if key != ''
+            if key != '' && key != 'A'
               span.text-muted.pt-5.header-alphabet= key
               a.d-flex.text-decoration-none.align-items-center.contact
                 img(src= value.avatar.slice(1), alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
@@ -59,10 +59,19 @@ mixin contacts(classes)
                 else
                   -key= ''
             else
-              span.text-muted.pt-3= key
-              a.d-flex.text-decoration-none.align-items-center.contact
-                img(src= value.avatar.slice(1), alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
-                div.pl-4.d-flex.flex-column
-                  p.mb-0
-                    b.text-dark.contact-name= value.name
-                  small.text-secondary.contact-status= value.status
+              if key == 'A'
+                span.text-muted.header-alphabet= key
+                a.d-flex.text-decoration-none.align-items-center.contact
+                  img(src= value.avatar.slice(1), alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
+                  div.pl-4.d-flex.flex-column
+                    p.mb-0
+                      b.text-dark.contact-name= value.name
+                    small.text-secondary.contact-status= value.status
+              else
+                span.text-muted.pt-3= key
+                a.d-flex.text-decoration-none.align-items-center.contact
+                  img(src= value.avatar.slice(1), alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
+                  div.pl-4.d-flex.flex-column
+                    p.mb-0
+                      b.text-dark.contact-name= value.name
+                    small.text-secondary.contact-status= value.status

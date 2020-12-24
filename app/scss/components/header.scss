@@ -1,6 +1,7 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
+
 @include media-breakpoint-up(xxl) {
   .header {
     position: static;
@@ -9,4 +10,19 @@
 
 .header-alphabet {
   padding-bottom: 20px;
+}
+
+.header-link {
+  padding-bottom: 23px;
+  padding-left: 21px;
+}
+
+.header-nav-link {
+  font-size: 0;
+}
+
+@include media-breakpoint-up(xxl) {
+  .header-nav-link {
+    font-size: 12.8px;
+  }
 }

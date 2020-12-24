@@ -1,10 +1,12 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
+
 .container-xxl {
   @include box-shadow(0 1rem 3rem theme-color("gray"));
+
   @include media-breakpoint-up(xxl) {
     min-height: calc(100vh - 3rem);
   }
-  min-height:100vh;
+  min-height: 100vh;
 }

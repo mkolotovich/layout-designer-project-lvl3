@@ -1,11 +1,9 @@
 make deploy:
-	surge dist
+	surge build
 make build:
-	gulp copy-with-depth
-	gulp copy
-	gulp sprite
-	gulp views
-	gulp sass
+	gulp build
 make start:
-	make build
-	gulp default
+	gulp build
+	gulp start
+make lint:
+	npx stylelint ./app/scss/**/*.scss

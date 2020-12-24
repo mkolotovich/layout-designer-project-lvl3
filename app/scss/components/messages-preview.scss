@@ -1,11 +1,14 @@
 .text-hidden {
   overflow: hidden;
-  text-overflow: ellipsis;
+
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
+
 .message-list .contact:hover {
   color: theme-color("light") !important;
 }
+
 .message-list .contact:hover .message-time {
   color: theme-color("secondary") !important;
 }

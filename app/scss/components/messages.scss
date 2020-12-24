@@ -1,11 +1,24 @@
 .messages {
-  padding-left: 33px;
   max-height: 613px;
+  padding-left: 24px;
+
+  @include media-breakpoint-up(xxl) {
+    max-height: 705px;
+    padding-left: 33px;
+  }
+
   @include hide-scrollbar;
 }
+
 .chat-message {
   @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.08));
+  max-width: 318px;
+
+  @include media-breakpoint-up(xxl) {
+    max-width: 558px;
+  }
 }
+
 .chat-btn {
   width: 42px;
   height: 42px;

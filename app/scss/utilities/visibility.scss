@@ -2,11 +2,9 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    @each $class, $values in $radius {
-      .radius#{$infix}#{$class} {
-        @each $value in $values {
-          #{$value}: 1rem;
-        }
+    @each $key, $value in $visible {
+      .invisible#{$infix} {
+        #{$key}: #{$value};
       }
     }
   }
