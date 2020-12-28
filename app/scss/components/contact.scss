@@ -26,7 +26,7 @@
 }
 
 .contacts-list {
-  @include media-breakpoint-up(xxl) {
+  @include media-breakpoint-up(xl) {
     height: 65vh;
   }
   height: 72vh;

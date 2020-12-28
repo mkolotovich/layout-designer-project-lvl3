@@ -6,18 +6,18 @@ html(lang="ru")
     title hexlet-messenger
     link(rel="stylesheet", href="app.css")
   body
-    .container-xxl.radius-xxl.mt-xxl-4.mb-xxl-4
-      .row
-        .col-xxl-4.px-4.border-xxl-right
+    .container-xxl.my-xl-4.px-0
+      .row.mx-xl-4.radius-xl.mx-0
+        .col-xl-4.px-4.border-xl-right
           include pug/header.pug
-          +header('','d-flex fixed-bottom header radius-xxl-left-top bg-primary mx-xxl-n4 align-items-center')
+          +header('','d-flex fixed-bottom header radius-xl-left-top bg-primary mx-xl-n4 align-items-center')
           div(class="tab-content" id="pills-tabContent")
             include pug/contact.pug
             +contacts('tab-pane fade show active')
             include pug/messages-preview.pug
             +messages-preview('list-unstyled contacts-list message-list tab-pane fade','chats') 
             include pug/profile.pug
-        .col-xxl-8.d-none.justify-content-center.d-xxl-flex
+        .col-xl-8.d-none.justify-content-center.d-xl-flex
           include pug/avatar.pug
     script(src="js/jquery.min.js")
     script(src="js/bootstrap.min.js")

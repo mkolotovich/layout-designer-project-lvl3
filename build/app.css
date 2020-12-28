@@ -7885,7 +7885,7 @@ a.text-gray:hover, a.text-gray:focus {
 .contacts-list {
   height: 72vh;
   overflow: auto; }
-  @media (min-width: 1600px) {
+  @media (min-width: 1200px) {
     .contacts-list {
       height: 65vh; } }
   .contacts-list {
@@ -7896,14 +7896,14 @@ a.text-gray:hover, a.text-gray:focus {
   .contacts-list::-webkit-scrollbar {
     display: none; }
 
-.container-xxl {
+.row {
   box-shadow: 0 1rem 3rem #efefef;
   min-height: 100vh; }
-  @media (min-width: 1600px) {
-    .container-xxl {
+  @media (min-width: 1200px) {
+    .row {
       min-height: calc(100vh - 3rem); } }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   .header {
     position: static; } }
 
@@ -7917,7 +7917,7 @@ a.text-gray:hover, a.text-gray:focus {
 .header-nav-link {
   font-size: 0; }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   .header-nav-link {
     font-size: 12.8px; } }
 
@@ -7941,9 +7941,7 @@ a.text-gray:hover, a.text-gray:focus {
   color: #6c757d !important; }
 
 .profile-name {
-  padding-right: 38px;
-  padding-bottom: 52px;
-  padding-left: 39px; }
+  padding-bottom: 52px; }
 
 .profile-contacts-item {
   padding-left: 12px; }
@@ -7974,7 +7972,7 @@ a.text-gray:hover, a.text-gray:focus {
 .chat-message {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
   max-width: 318px; }
-  @media (min-width: 1600px) {
+  @media (min-width: 1200px) {
     .chat-message {
       max-width: 558px; } }
 

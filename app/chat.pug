@@ -6,12 +6,12 @@ html(lang="ru")
     title hexlet-messenger
     link(rel="stylesheet", href="app.css")
   body
-    .container-xxl.radius-xxl.mt-xxl-4.mb-xxl-4
-      .row
-        .col-xxl-4.px-4.border-xxl-right
+    .container-xxl.my-xl-4.px-0
+      .row.mx-xl-4.radius-xl.mx-0
+        .col-xl-4.px-4.border-xl-right
           include pug/header.pug
           - var page = "chat"
-          +header('index.html', 'd-flex fixed-bottom header radius-xxl-left-top bg-primary mx-xxl-n4 align-items-center')
+          +header('index.html', 'd-flex fixed-bottom header radius-xl-left-top bg-primary mx-xl-n4 align-items-center')
           div(class="tab-content" id="pills-tabContent")
             include pug/contact.pug
             +contacts('tab-pane fade')
@@ -20,7 +20,7 @@ html(lang="ru")
             include pug/profile.pug
             include pug/chat-mobile.pug
             +chat-mobile('tab-content d-xxl-none tab-pane fade', "pills-home", "pills-profile", "pills-messages")
-        .col-xxl-8.d-none.d-xxl-block.pr-xxl-5
+        .col-xl-8.d-none.d-xl-block.pr-xxl-5
           +chat-mobile('tab-content', "v-home", "v-pills-profile", "v-pills-messages")
     script(src="js/jquery.min.js")
     script(src="js/bootstrap.min.js")
