@@ -7,4 +7,5 @@
   @include media-breakpoint-up(xl) {
     height: calc(100vh - 3rem);
   }
+  min-height: 100vh;
 }

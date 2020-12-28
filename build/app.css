@@ -7883,7 +7883,7 @@ a.text-gray:hover, a.text-gray:focus {
   margin-bottom: 20px; }
 
 .contacts-list {
-  height: 72vh;
+  height: 616px;
   overflow: auto; }
   @media (min-width: 1200px) {
     .contacts-list {
@@ -7897,7 +7897,8 @@ a.text-gray:hover, a.text-gray:focus {
     display: none; }
 
 .row {
-  box-shadow: 0 1rem 3rem #efefef; }
+  box-shadow: 0 1rem 3rem #efefef;
+  min-height: 100vh; }
   @media (min-width: 1200px) {
     .row {
       height: calc(100vh - 3rem); } }
@@ -7907,7 +7908,7 @@ a.text-gray:hover, a.text-gray:focus {
     position: static; } }
 
 .header-alphabet {
-  padding-bottom: 20px; }
+  padding-bottom: 16px; }
 
 .header-link {
   padding-bottom: 23px;
