@@ -7923,8 +7923,8 @@ a.text-gray:hover, a.text-gray:focus {
 .search .form-control-lg {
   font-size: 1rem; }
 
-.avatar {
-  margin: auto; }
+.avatar-name {
+  margin-top: 18px; }
 
 .text-hidden {
   overflow: hidden;
