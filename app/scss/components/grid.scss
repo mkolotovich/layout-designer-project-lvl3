@@ -5,7 +5,6 @@
 .row {
   @include box-shadow(0 1rem 3rem theme-color("gray"));
   @include media-breakpoint-up(xl) {
-    min-height: calc(100vh - 3rem);
+    height: calc(100vh - 3rem);
   }
-  min-height: 100vh;
 }
