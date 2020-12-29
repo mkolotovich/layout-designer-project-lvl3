@@ -7977,6 +7977,9 @@ a.text-gray:hover, a.text-gray:focus {
 .messages-item {
   margin-bottom: 14px; }
 
+.messages-input {
+  margin-top: 12px; }
+
 .chat-message {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
   max-width: 318px; }
