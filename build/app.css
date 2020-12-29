@@ -7907,9 +7907,6 @@ a.text-gray:hover, a.text-gray:focus {
   .header {
     position: static; } }
 
-.header-alphabet {
-  padding-bottom: 16px; }
-
 .header-link {
   padding-bottom: 23px;
   padding-left: 21px; }
@@ -7965,9 +7962,9 @@ a.text-gray:hover, a.text-gray:focus {
 .messages {
   max-height: 613px;
   padding-left: 24px; }
-  @media (min-width: 1600px) {
+  @media (min-width: 1200px) {
     .messages {
-      max-height: 705px;
+      max-height: 640px;
       padding-left: 33px; } }
   .messages {
     overflow-x: hidden;

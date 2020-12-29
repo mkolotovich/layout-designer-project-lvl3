@@ -2,8 +2,8 @@
   max-height: 613px;
   padding-left: 24px;
 
-  @include media-breakpoint-up(xxl) {
-    max-height: 705px;
+  @include media-breakpoint-up(xl) {
+    max-height: 640px;
     padding-left: 33px;
   }
 

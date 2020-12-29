@@ -45,7 +45,7 @@ mixin contacts(classes)
         each value in val
           li.d-flex.flex-column
             if key != '' && key != 'A'
-              span.text-muted.pt-5.header-alphabet= key
+              span.text-muted.pt-5.pb-3= key
               a.d-flex.text-decoration-none.align-items-center.contact
                 img(src= value.avatar.slice(1), alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
                 div.pl-4.d-flex.flex-column
@@ -60,7 +60,7 @@ mixin contacts(classes)
                   -key= ''
             else
               if key == 'A'
-                span.text-muted.header-alphabet= key
+                span.text-muted.pb-3= key
                 a.d-flex.text-decoration-none.align-items-center.contact
                   img(src= value.avatar.slice(1), alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
                   div.pl-4.d-flex.flex-column
