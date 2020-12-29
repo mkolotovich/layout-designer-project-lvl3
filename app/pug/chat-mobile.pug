@@ -9,11 +9,11 @@ mixin chat-mobile(classes, id1, id2, id3)
       +chat-header("images/avatar_3.jpg",'Алексей Примадонин','Онлайн')
     ul.messages.mb-0
       include chat-messages.pug
-      +chat-messages("images/avatar_4.jpg",'bg-gray p-4 rounded chat-message','Вениамин Редакторович','Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?','8 минут назад','d-flex')
+      +chat-messages("images/avatar_4.jpg",'bg-light p-4 rounded chat-message','Вениамин Редакторович','Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?','8 минут назад','d-flex')
       +chat-messages("images/avatar_1.jpg",'bg-primary p-4 rounded chat-message','','Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень','5 минут назад','d-flex ml-xl-auto')
-      +chat-messages("images/avatar_4.jpg",'bg-gray p-4 rounded chat-message','Вениамин Редакторович','Лады','5 минут назад','d-flex invisible-xxl')
+      +chat-messages("images/avatar_4.jpg",'bg-light p-4 rounded chat-message','Вениамин Редакторович','Лады','5 минут назад','d-flex invisible-xxl')
       +chat-messages("images/avatar_1.jpg",'bg-primary p-4 rounded chat-message','','А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие','5 минут назад','d-flex ml-xl-auto')
-      +chat-messages("images/avatar_4.jpg",'bg-gray p-4 rounded chat-message','Вениамин Редакторович','о_О','Только что','d-flex')
+      +chat-messages("images/avatar_4.jpg",'bg-light p-4 rounded chat-message','Вениамин Редакторович','о_О','Только что','d-flex')
     form.ml-5.pl-xxl-2.d-flex.justify-content-between.align-items-center.border-top
       input(type="text" placeholder="Напишите сообщение...").mt-4.border-0
       button(type="submit").rounded-circle.bg-primary.border-0.chat-btn.mt-3

@@ -3,7 +3,7 @@ mixin chat-messages(image,classes,name,message,time,side)
     div(class=side)
       img(src=image, alt="avatar" width="50" height="50").rounded-circle.d-xl-block.d-none.mr-3.mt-auto
       div(class=classes)
-        b.text-dark=name
+        p.mb-1.font-weight-bold.text-dark=name
         p.text-dark.mb-2=message
         hr.mt-0.mb-1.border-light
         small.text-light=time
