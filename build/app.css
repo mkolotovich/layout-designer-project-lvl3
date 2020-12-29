@@ -7984,6 +7984,17 @@ a.text-gray:hover, a.text-gray:focus {
 
 .messages-header {
   margin-bottom: 50px; }
+  .messages-header::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 91px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+    top: 0;
+    left: -25px; }
+    @media (min-width: 1200px) {
+      .messages-header::after {
+        width: 0; } }
 
 .messages-input {
   margin-top: 12px; }
