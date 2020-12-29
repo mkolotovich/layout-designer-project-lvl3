@@ -3,9 +3,9 @@
 @import "../../../node_modules/bootstrap/scss/mixins";
 
 .row {
-  @include box-shadow(0 1rem 3rem theme-color("gray"));
   @include media-breakpoint-up(xl) {
     height: calc(100vh - 3rem);
   }
-  min-height: 100vh;
+  height: 100vh;
+  background: white;
 }

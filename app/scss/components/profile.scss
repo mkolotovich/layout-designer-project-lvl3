@@ -4,10 +4,11 @@
 
 .profile-contacts-item {
   padding-left: 12px;
+  padding-bottom: 10px;
 
   &::after {
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
     left: 6px;
 
     width: calc(100% - 12px);
@@ -17,4 +18,15 @@
 
     content: "";
   }
+}
+.profile-image {
+  margin-top: 19px;
+}
+
+.profile-contacts {
+  margin-top: 49px;
+}
+
+.profile-contacts-item:not(:first-child) {
+  padding-top: 15px;
 }
