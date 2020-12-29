@@ -7912,11 +7912,13 @@ a.text-gray:hover, a.text-gray:focus {
   padding-left: 21px; }
 
 .header-nav-link {
-  font-size: 0; }
+  font-size: 0;
+  margin-right: 2px; }
 
 @media (min-width: 1200px) {
   .header-nav-link {
-    font-size: 12.8px; } }
+    font-size: 12.8px;
+    margin-right: 0; } }
 
 .search .form-control-lg {
   font-size: 1rem; }
@@ -7960,7 +7962,7 @@ a.text-gray:hover, a.text-gray:focus {
   padding-top: 15px; }
 
 .messages {
-  max-height: 613px;
+  max-height: 610px;
   padding-left: 24px; }
   @media (min-width: 1200px) {
     .messages {
@@ -7976,6 +7978,9 @@ a.text-gray:hover, a.text-gray:focus {
 
 .messages-item {
   margin-bottom: 14px; }
+
+.messages-header {
+  margin-bottom: 50px; }
 
 .messages-input {
   margin-top: 12px; }

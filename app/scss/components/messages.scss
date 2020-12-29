@@ -1,5 +1,5 @@
 .messages {
-  max-height: 613px;
+  max-height: 610px;
   padding-left: 24px;
 
   @include media-breakpoint-up(xl) {
@@ -12,6 +12,10 @@
 
 .messages-item {
   margin-bottom: 14px;
+}
+
+.messages-header {
+  margin-bottom: 50px;
 }
 
 .messages-input {

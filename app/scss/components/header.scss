@@ -15,10 +15,12 @@
 
 .header-nav-link {
   font-size: 0;
+  margin-right: 2px;
 }
 
 @include media-breakpoint-up(xl) {
   .header-nav-link {
     font-size: 12.8px;
+    margin-right: 0;
   }
 }
