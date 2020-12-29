@@ -7974,6 +7974,9 @@ a.text-gray:hover, a.text-gray:focus {
   .messages::-webkit-scrollbar {
     display: none; }
 
+.messages-item {
+  margin-bottom: 14px; }
+
 .chat-message {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
   max-width: 318px; }
