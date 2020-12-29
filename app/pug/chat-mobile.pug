@@ -14,7 +14,7 @@ mixin chat-mobile(classes, id1, id2, id3)
       +chat-messages("images/avatar_4.jpg",'d-flex flex-column bg-light p-4 rounded chat-message','text-secondary mb-2','Вениамин Редакторович','Лады','text-secondary','5 минут назад','d-flex invisible-xxl')
       +chat-messages("images/avatar_1.jpg",'d-flex flex-column bg-primary p-4 rounded chat-message','text-light mb-2','','А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие','text-gray','3 минуты назад','d-flex ml-xl-auto')
       +chat-messages("images/avatar_4.jpg",'d-flex flex-column bg-light p-4 rounded chat-message','text-secondary mb-2','Вениамин Редакторович','о_О','text-secondary','Только что','d-flex')
-    form.ml-xl-5.ml-1.pl-xxl-2.d-flex.justify-content-between.align-items-center.border-top
+    form.ml-xl-5.messages-form.pl-xxl-2.d-flex.justify-content-between.align-items-center.border-top
       input(type="text" placeholder="Напишите сообщение...").mt-xl-4.border-0.messages-input
       button(type="submit").rounded-circle.bg-primary.border-0.chat-btn.mt-3
         img(src="images/icons/sprite.svg#images--icons--cursor", alt="submit" width="21")

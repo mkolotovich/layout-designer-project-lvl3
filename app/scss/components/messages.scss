@@ -14,6 +14,10 @@
   margin-bottom: 14px;
 }
 
+.messages-form {
+  margin-left: 6px;
+}
+
 .messages-header {
   margin-bottom: 50px;
 }
@@ -24,7 +28,7 @@
 
 .chat-message {
   @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.08));
-  max-width: 318px;
+  max-width: 327px;
 
   @include media-breakpoint-up(xl) {
     max-width: 558px;
