@@ -7939,8 +7939,8 @@ a.text-gray:hover, a.text-gray:focus {
   padding-bottom: 52px; }
 
 .profile-contacts-item {
-  padding-left: 12px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  padding-left: 12px; }
   .profile-contacts-item::after {
     position: absolute;
     bottom: 2px;

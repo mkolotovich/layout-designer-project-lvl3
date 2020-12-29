@@ -3,8 +3,8 @@
 }
 
 .profile-contacts-item {
-  padding-left: 12px;
   padding-bottom: 10px;
+  padding-left: 12px;
 
   &::after {
     position: absolute;
@@ -19,6 +19,7 @@
     content: "";
   }
 }
+
 .profile-image {
   margin-top: 19px;
 }
