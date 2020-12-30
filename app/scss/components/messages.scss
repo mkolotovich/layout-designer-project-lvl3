@@ -1,5 +1,5 @@
 .messages {
-  max-height: 610px;
+  max-height: 611px;
   padding-left: 48px;
 
   @include media-breakpoint-up(xl) {
@@ -20,7 +20,7 @@
 }
 
 .messages-header {
-  margin-bottom: 50px;
+  margin-bottom: 49px;
   &::after {
     content: "";
     position: absolute;
@@ -55,6 +55,7 @@
 .chat-btn {
   width: 42px;
   height: 42px;
+  margin-top: 15px;
 
   @include media-breakpoint-up(xl) {
     width: 50px;

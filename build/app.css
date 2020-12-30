@@ -7909,7 +7909,8 @@ a.text-gray:hover, a.text-gray:focus {
 
 .header-link {
   padding-bottom: 23px;
-  padding-left: 21px; }
+  padding-left: 21px;
+  margin-top: -1px; }
 
 .header-nav-link {
   font-size: 0; }
@@ -7960,7 +7961,7 @@ a.text-gray:hover, a.text-gray:focus {
   padding-top: 15px; }
 
 .messages {
-  max-height: 610px;
+  max-height: 611px;
   padding-left: 48px; }
   @media (min-width: 1200px) {
     .messages {
@@ -7982,7 +7983,7 @@ a.text-gray:hover, a.text-gray:focus {
   padding-right: 16px; }
 
 .messages-header {
-  margin-bottom: 50px; }
+  margin-bottom: 49px; }
   .messages-header::after {
     content: "";
     position: absolute;
@@ -8010,7 +8011,8 @@ a.text-gray:hover, a.text-gray:focus {
 
 .chat-btn {
   width: 42px;
-  height: 42px; }
+  height: 42px;
+  margin-top: 15px; }
   @media (min-width: 1200px) {
     .chat-btn {
       width: 50px;
