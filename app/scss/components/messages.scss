@@ -39,6 +39,7 @@
   margin-top: 12px;
   &::placeholder {
     color: theme-color("secondary");
+    letter-spacing: -0.5px;
   }
 }
 

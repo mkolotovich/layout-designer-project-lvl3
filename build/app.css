@@ -7998,7 +7998,8 @@ a.text-gray:hover, a.text-gray:focus {
 .messages-input {
   margin-top: 12px; }
   .messages-input::placeholder {
-    color: #6c757d; }
+    color: #6c757d;
+    letter-spacing: -0.5px; }
 
 .chat-message {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
@@ -8173,25 +8174,11 @@ a.text-gray:hover, a.text-gray:focus {
   .border-xxl {
     border: 1px solid #efefef !important; } }
 
-.invisible {
-  visibility: hidden; }
+.letter-spacing-04 {
+  letter-spacing: 0.45px; }
 
-@media (min-width: 576px) {
-  .invisible-sm {
-    visibility: hidden; } }
+.letter-spacing-03 {
+  letter-spacing: -0.3px; }
 
-@media (min-width: 768px) {
-  .invisible-md {
-    visibility: hidden; } }
-
-@media (min-width: 992px) {
-  .invisible-lg {
-    visibility: hidden; } }
-
-@media (min-width: 1200px) {
-  .invisible-xl {
-    visibility: hidden; } }
-
-@media (min-width: 1600px) {
-  .invisible-xxl {
-    visibility: hidden; } }
+.letter-spacing-n-04 {
+  letter-spacing: -0.4px; }
