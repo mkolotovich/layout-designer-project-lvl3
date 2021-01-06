@@ -26,6 +26,7 @@
 
 .profile-contacts {
   margin-top: 49px;
+
   @include media-breakpoint-up(xl) {
     margin-top: 22px;
     padding-left: 28px;

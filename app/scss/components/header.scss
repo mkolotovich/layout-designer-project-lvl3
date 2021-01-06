@@ -1,10 +1,12 @@
 .header {
-  order: 1;
   position: sticky;
   bottom: 0;
   z-index: 1;
-  margin-left: -24px;
+
+  order: 1;
   margin-right: -16px;
+  margin-left: -24px;
+
   @include media-breakpoint-up(xl) {
     order: 0;
   }

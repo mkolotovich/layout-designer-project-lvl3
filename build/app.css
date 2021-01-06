@@ -7885,12 +7885,12 @@ a.text-gray:hover, a.text-gray:focus {
   background: white; }
 
 .header {
-  order: 1;
   position: sticky;
   bottom: 0;
   z-index: 1;
-  margin-left: -24px;
-  margin-right: -16px; }
+  order: 1;
+  margin-right: -16px;
+  margin-left: -24px; }
   @media (min-width: 1200px) {
     .header {
       order: 0; } }
@@ -7953,8 +7953,8 @@ a.text-gray:hover, a.text-gray:focus {
   padding-top: 15px; }
 
 .messages {
-  padding-left: 48px;
-  padding-right: 48px; }
+  padding-right: 48px;
+  padding-left: 48px; }
   @media (min-width: 1200px) {
     .messages {
       padding-right: 0; } }
@@ -7963,15 +7963,15 @@ a.text-gray:hover, a.text-gray:focus {
   margin-bottom: 16px; }
 
 .messages-form {
-  padding-right: 16px;
-  padding-left: 30px;
   position: sticky;
   bottom: 73px;
-  background: white;
-  padding-bottom: 15px; }
+  padding-right: 16px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  background: white; }
   @media (min-width: 1200px) {
     .messages-form {
-      bottom: 0px; } }
+      bottom: 0; } }
 
 .messages-header {
   margin-bottom: 49px; }
