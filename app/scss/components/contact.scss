@@ -24,13 +24,3 @@
   margin-top: 21px;
   margin-bottom: 20px;
 }
-
-.contacts-list {
-  @include media-breakpoint-up(xl) {
-    height: 65vh;
-  }
-  height: 616px;
-  overflow: auto;
-
-  @include hide-scrollbar;
-}

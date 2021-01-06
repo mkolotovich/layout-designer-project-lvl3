@@ -1,10 +1,12 @@
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
-
-@include media-breakpoint-up(xl) {
-  .header {
-    position: static;
+.header {
+  order: 1;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  margin-left: -24px;
+  margin-right: -16px;
+  @include media-breakpoint-up(xl) {
+    order: 0;
   }
 }
 

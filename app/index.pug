@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-html(lang="ru")
+html(lang="ru").h-100
   head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title hexlet-messenger
-    link(rel="stylesheet", href="app.css")
-  body
-    .container-xxl.px-0.py-xl-4.px-xl-4
-      .row.radius-xl.mx-0
-        .col-xl-4.px-4.border-xl-right
+    include pug/head.pug
+  body.h-100
+    .container-xxl.px-0.py-xl-4.px-xl-4.h-100
+      .row.radius-xl.mx-0.h-100
+        .col-xl-4.px-4.border-xl-right.h-100.overflow-hidden
           include pug/header.pug
-          +header('','d-flex fixed-bottom header radius-xl-left-top bg-primary mx-xl-n4 align-items-center')
-          div(class="tab-content" id="pills-tabContent")
+          div(class="tab-content" id="pills-tabContent").h-100.d-flex.flex-column
+            +header('','d-flex fixed-bottom header radius-xl-left-top bg-primary mx-xl-n4 align-items-center')
             include pug/contact.pug
-            +contacts('tab-pane fade show active')
+            +contacts('tab-pane fade show active hide-scrollbar h-100')
             include pug/messages-preview.pug
-            +messages-preview('list-unstyled contacts-list message-list tab-pane fade','chats') 
+            +messages-preview('list-unstyled message-list tab-pane fade h-100','chats') 
             include pug/profile.pug
         .col-xl-8.d-none.justify-content-center.d-xl-flex
-          include pug/avatar.pug
+          include pug/welcome-message.pug
     script(src="js/jquery.min.js")
     script(src="js/bootstrap.min.js")

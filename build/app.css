@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -53,7 +52,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4593,7 +4592,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4678,7 +4677,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Roboto", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7882,30 +7881,19 @@ a.text-gray:hover, a.text-gray:focus {
   margin-top: 21px;
   margin-bottom: 20px; }
 
-.contacts-list {
-  height: 616px;
-  overflow: auto; }
-  @media (min-width: 1200px) {
-    .contacts-list {
-      height: 65vh; } }
-  .contacts-list {
-    overflow-x: hidden;
-    overflow-y: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none; }
-  .contacts-list::-webkit-scrollbar {
-    display: none; }
-
 .row {
-  height: 100vh;
   background: white; }
-  @media (min-width: 1200px) {
-    .row {
-      height: calc(100vh - 3rem); } }
 
-@media (min-width: 1200px) {
-  .header {
-    position: static; } }
+.header {
+  order: 1;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  margin-left: -24px;
+  margin-right: -16px; }
+  @media (min-width: 1200px) {
+    .header {
+      order: 0; } }
 
 .header-link {
   margin-top: -1px;
@@ -7922,7 +7910,7 @@ a.text-gray:hover, a.text-gray:focus {
 .search .form-control-lg {
   font-size: 1rem; }
 
-.avatar-name {
+.welcome-message-name {
   margin-top: 18px; }
 
 .text-hidden {
@@ -7956,31 +7944,30 @@ a.text-gray:hover, a.text-gray:focus {
 
 .profile-contacts {
   margin-top: 49px; }
+  @media (min-width: 1200px) {
+    .profile-contacts {
+      margin-top: 22px;
+      padding-left: 28px; } }
 
 .profile-contacts-item:not(:first-child) {
   padding-top: 15px; }
 
 .messages {
-  max-height: 611px;
   padding-left: 48px; }
-  @media (min-width: 1200px) {
-    .messages {
-      max-height: 640px;
-      padding-left: 33px; } }
-  .messages {
-    overflow-x: hidden;
-    overflow-y: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none; }
-  .messages::-webkit-scrollbar {
-    display: none; }
 
 .messages-item {
   margin-bottom: 16px; }
 
 .messages-form {
   padding-right: 16px;
-  padding-left: 30px; }
+  padding-left: 30px;
+  position: sticky;
+  bottom: 73px;
+  background: white;
+  padding-bottom: 15px; }
+  @media (min-width: 1200px) {
+    .messages-form {
+      bottom: 0px; } }
 
 .messages-header {
   margin-bottom: 49px; }
@@ -8184,3 +8171,12 @@ a.text-gray:hover, a.text-gray:focus {
 
 .letter-spacing-n-04 {
   letter-spacing: -0.4px; }
+
+.hide-scrollbar {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; }

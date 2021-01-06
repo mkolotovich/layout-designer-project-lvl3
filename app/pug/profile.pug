@@ -1,10 +1,10 @@
 include search.pug
-div.tab-pane.fade(id="profile" role="tabpanel" aria-labelledby="pills-contact-tab")
+div.tab-pane.fade.hide-scrollbar(id="profile" role="tabpanel" aria-labelledby="pills-contact-tab")
   +search('Профиль', 'Поиск по сообщениям', 'pt-5 search mb-5 contacts profile')
   div.card.text-center.align-items-center.border-0.py-3.mb-3
     img(src="images/avatar_1.jpg", alt="avatar" width="90").rounded-circle.profile-image
     div.pt-3.profile-name
-      h6.card-title.font-weight-bold.text-dark.lh-3.mb-3 Кодовёнок Хекслетович
+      p.card-title.font-weight-bold.text-dark.lh-3.mb-3 Кодовёнок Хекслетович
       p.card-text.text-secondary.opacity-50 Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
   ul.list-group.py-3.profile-contacts
     li.list-group-item.border-0.profile-contacts-item.d-flex.justify-content-between

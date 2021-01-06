@@ -1,77 +1,15 @@
--
-  var contacts = {
-    "A": [{
-      name: "Алексей Примадонин",
-      status: "Онлайн",
-      avatar: "/images/avatar_3.jpg"
-    }],
-
-    "В": [{
-      name: "Вениамин Редакторович",
-      status: "Онлайн",
-      avatar: "/images/avatar_4.jpg"
-    }],
-
-    "Д": [{
-      name: "Джедай Падаванов",
-      status: "Был онлайн вчера",
-      avatar: "/images/avatar_2.jpg"
-    }],
-
-    "К": [{
-      name: "Кодовёнок Хекслетович",
-      status: "Был онлайн 3 часа назад",
-      avatar: "/images/avatar_1.jpg"
-    },
-    {
-      name: "Королева Верстальщина",
-      status: "Была онлайн вчера",
-      avatar: "/images/avatar_5.jpg"
-    }],
-
-    "П": [{
-      name: "Питонист Джангович",
-      status: "Был онлайн вчера",
-      avatar: "/images/avatar_6.jpg"
-    }],
-  }
 - var count = 0;
 include search.pug
 mixin contacts(classes)
   div(class=classes id="contacts")
     +search('Контакты', 'Поиск по контактам','pt-5 search mb-5 contacts')
-    ul(class="list-unstyled contacts-list")
-      each val, key in contacts
-        each value in val
-          li.d-flex.flex-column
-            if key != '' && key != 'A'
-              span.text-muted.pt-5.pb-3= key
-              a.d-flex.text-decoration-none.align-items-center.contact
-                img(src= value.avatar.slice(1), alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
-                div.pl-4.d-flex.flex-column
-                  p.mb-0
-                    b.text-dark.contact-name= value.name
-                  small.text-secondary.contact-status= value.status
-              if key == "К"
-                if count != 0 
-                  -key= key
-                  -count = count + 1
-                else
-                  -key= ''
-            else
-              if key == 'A'
-                span.text-muted.pb-3= key
-                a.d-flex.text-decoration-none.align-items-center.contact
-                  img(src= value.avatar.slice(1), alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
-                  div.pl-4.d-flex.flex-column
-                    p.mb-0
-                      b.text-dark.contact-name= value.name
-                    small.text-secondary.contact-status= value.status
-              else
-                span.text-muted.pt-3= key
-                a.d-flex.text-decoration-none.align-items-center.contact
-                  img(src= value.avatar.slice(1), alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
-                  div.pl-4.d-flex.flex-column
-                    p.mb-0
-                      b.text-dark.contact-name= value.name
-                    small.text-secondary.contact-status= value.status
+    each val, key in contacts
+      p.text-muted.mt-5= key
+      each value in val
+        div.d-flex.flex-column.mb-3
+          a.d-flex.text-decoration-none.align-items-center.contact
+            img(src= value.avatar.slice(1), alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-3
+            div.pl-4.d-flex.flex-column
+              p.mb-0
+                b.text-dark.contact-name= value.name
+              small.text-secondary.contact-status= value.status

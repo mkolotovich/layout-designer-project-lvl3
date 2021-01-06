@@ -1,13 +1,5 @@
 .messages {
-  max-height: 611px;
   padding-left: 48px;
-
-  @include media-breakpoint-up(xl) {
-    max-height: 640px;
-    padding-left: 33px;
-  }
-
-  @include hide-scrollbar;
 }
 
 .messages-item {
@@ -17,6 +9,13 @@
 .messages-form {
   padding-right: 16px;
   padding-left: 30px;
+  position: sticky;
+  bottom: 73px;
+  background: white;
+  padding-bottom: 15px;
+  @include media-breakpoint-up(xl) {
+    bottom: 0px;
+  }
 }
 
 .messages-header {

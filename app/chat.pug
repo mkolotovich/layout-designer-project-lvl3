@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-html(lang="ru")
+html(lang="ru").h-100
   head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title hexlet-messenger
-    link(rel="stylesheet", href="app.css")
-  body
-    .container-xxl.px-0.py-xl-4.px-0.px-xl-4
-      .row.radius-xl.mx-0
-        .col-xl-4.border-xl-right.px-xl-4.pl-4.pr-3
+    include pug/head.pug
+  body.h-100
+    .container-xxl.px-0.py-xl-4.px-0.px-xl-4.h-100
+      .row.radius-xl.mx-0.h-100
+        .col-xl-4.border-xl-right.px-xl-4.pl-4.pr-3.h-100.hide-scrollbar
           include pug/header.pug
           - var page = "chat"
-          +header('index.html', 'd-flex fixed-bottom header radius-xl-left-top bg-primary mx-xl-n4 align-items-center')
-          div(class="tab-content" id="pills-tabContent")
+          div(class="tab-content" id="pills-tabContent").h-100.d-flex.flex-column
+            +header('index.html', 'd-flex header radius-xl-left-top bg-primary mx-xl-n4 align-items-center')
             include pug/contact.pug
-            +contacts('tab-pane fade')
+            +contacts('tab-pane fade hide-scrollbar h-100')
             include pug/messages-preview.pug
-            +messages-preview('list-unstyled contacts-list message-list tab-pane fade show active','chats')
+            +messages-preview('list-unstyled message-list tab-pane fade show active h-100','chats')
             include pug/profile.pug
             include pug/chat-mobile.pug
             +chat-mobile('tab-content d-xl-none tab-pane fade ml-n4 mr-n3', "current-chat", "pills-profile", "pills-messages")
-        .col-xl-8.d-none.d-xl-block.pr-xxl-5.pr-5
-          +chat-mobile('tab-content', "v-home", "v-pills-profile", "v-pills-messages")
+        .col-xl-8.d-none.d-xl-block.pr-5.h-100.pl-xl-0
+          +chat-mobile('tab-content h-100 hide-scrollbar', "v-home", "v-pills-profile", "v-pills-messages")
     script(src="js/jquery.min.js")
     script(src="js/bootstrap.min.js")

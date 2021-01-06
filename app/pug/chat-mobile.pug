@@ -1,7 +1,7 @@
 include chat-header.pug
 mixin chat-mobile(classes, id1, id2, id3)
   div(class=classes id=id1)
-    div.tab-pane.fade.sticky-top.show.active
+    div.tab-pane.fade.sticky-top.show.active.bg-white
       +chat-header("images/avatar_4.jpg",'Вениамин Редакторович','Онлайн')
     div.tab-pane.fade.sticky-top(id=id2 role="tabpanel")
       +chat-header("images/avatar_2.jpg",'Джедай Падаванов','Был онлайн вчера')

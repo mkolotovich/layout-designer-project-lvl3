@@ -9,6 +9,8 @@ var gulpCopy = require('gulp-copy');
 var outputPath = './build/';
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
+var data = require('gulp-data');
+var fs = require('fs');
 
 gulp.task('serve', function() {
 
@@ -22,7 +24,7 @@ gulp.task('serve', function() {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./app/**/*.pug', gulp.parallel('views'));
+  gulp.watch(['./app/**/*.pug','./app/**/*.json'], gulp.parallel('views'));
   gulp.watch('./app/**/*.svg', gulp.parallel('sprite'));
   gulp.watch('./app/scss/**/*.scss', gulp.parallel('sass'));
 });
@@ -57,6 +59,9 @@ gulp.task('sprite', function() {
 
 gulp.task('views', function buildHTML() {
   return gulp.src('./app/*.pug')
+  .pipe(data(function(file) {
+    return JSON.parse(fs.readFileSync('./app/pug/contacts-data.json'))
+   }))
   .pipe(pug({}))
   .pipe(gulp.dest('./build'))
   .pipe(browserSync.stream());
