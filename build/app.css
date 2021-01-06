@@ -7995,9 +7995,10 @@ a.text-gray:hover, a.text-gray:focus {
 
 .chat-message {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08); }
-  @media (min-width: 1200px) {
-    .chat-message {
-      max-width: 558px; } }
+
+@media (min-width: 1200px) {
+  .messages-wrapper {
+    width: 75%; } }
 
 .chat-btn {
   width: 42px;
