@@ -17,7 +17,7 @@ html(lang="ru").h-100
             +messages-preview('list-unstyled message-list tab-pane fade show active h-100','chats')
             include pug/profile.pug
             include pug/chat-mobile.pug
-            +chat-mobile('tab-content d-xl-none tab-pane fade ml-n4 mr-n3')
+            +chat-mobile('tab-content d-xl-none tab-pane fade ml-n4 mr-n3', 'current-chat')
         div.col-xl-8.d-none.d-xl-block.pr-5.h-100.pl-xl-0
           +chat-mobile('tab-content h-100 hide-scrollbar')
     include pug/scripts.pug
