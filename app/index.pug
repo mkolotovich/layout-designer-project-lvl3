@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 html(lang="ru").h-100
   head
+    - var title = 'Hexlet Messenger'
     include pug/head.pug
   body.h-100
-    .container-xxl.px-0.py-xl-4.px-xl-4.h-100
-      .row.radius-xl.mx-0.h-100
-        .col-xl-4.px-4.border-xl-right.h-100.overflow-hidden
+    div.container-xxl.px-0.py-xl-4.px-xl-4.h-100
+      div.row.radius-xl.mx-0.h-100
+        div.col-xl-4.px-4.border-xl-right.h-100.overflow-hidden
           include pug/header.pug
-          div(class="tab-content" id="pills-tabContent").h-100.d-flex.flex-column
+          div.h-100.d-flex.flex-column.tab-content
             +header('','d-flex fixed-bottom header radius-xl-left-top bg-primary mx-xl-n4 align-items-center')
             include pug/contact.pug
             +contacts('tab-pane fade show active hide-scrollbar h-100')
             include pug/messages-preview.pug
             +messages-preview('list-unstyled message-list tab-pane fade h-100','chats') 
             include pug/profile.pug
-        .col-xl-8.d-none.justify-content-center.d-xl-flex
+        div.col-xl-8.d-none.justify-content-center.d-xl-flex
           include pug/welcome-message.pug
-    script(src="js/jquery.min.js")
-    script(src="js/bootstrap.min.js")
+    include pug/scripts.pug

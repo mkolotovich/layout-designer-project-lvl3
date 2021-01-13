@@ -1,9 +1,0 @@
-mixin chat-messages(image,classes,text,display,name,message,color,time,side)
-  li.d-flex.messages-item
-    div(class=side)
-      img(src=image, alt="avatar" width="50" height="50").rounded-circle.d-xl-block.d-none.mr-3.mt-auto
-      div(class=classes)
-        p(class=display)=name
-        p(class=text)=message
-        hr.mt-0.mb-1.border-light.w-100
-        small(class=color)=time

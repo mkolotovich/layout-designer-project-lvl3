@@ -1,19 +1,50 @@
-include chat-header.pug
-mixin chat-mobile(classes, id1, id2, id3)
-  div(class=classes id=id1)
-    div.tab-pane.fade.sticky-top.show.active.bg-white
-      +chat-header("images/avatar_4.jpg",'Вениамин Редакторович','Онлайн')
-    div.tab-pane.fade.sticky-top(id=id2 role="tabpanel")
-      +chat-header("images/avatar_2.jpg",'Джедай Падаванов','Был онлайн вчера')
-    div.tab-pane.fade.sticky-top(id=id3 role="tabpanel")
-      +chat-header("images/avatar_3.jpg",'Алексей Примадонин','Онлайн')
+mixin chat-mobile(classes)
+  div(class=classes id="current-chat")
+    ul.list-unstyled.mb-xl-5.messages-header.pl-4.pl-xl-3.sticky-top.bg-white
+      li.d-flex.align-items-center
+        img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50").rounded-circle.contacts-avatar.ml-n2.ml-xl-0
+        div.pl-4.d-flex.flex-column
+          p.mb-0.font-weight-bold.text-dark Вениамин Редакторович
+          small.text-secondary Онлайн
     ul.messages.mb-0
-      include chat-messages.pug
-      +chat-messages("images/avatar_4.jpg",'d-flex flex-column bg-light p-4 rounded chat-message','text-secondary mb-2','mb-1 font-weight-bold text-dark','Вениамин Редакторович','Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?','text-secondary','8 минут назад','d-flex messages-wrapper')
-      +chat-messages("images/avatar_1.jpg",'d-flex flex-column bg-primary p-4 rounded chat-message','text-light mb-2','d-none','','Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень','text-gray','5 минут назад','d-flex ml-xl-auto messages-wrapper')
-      +chat-messages("images/avatar_4.jpg",'d-flex flex-column bg-light p-4 rounded chat-message','text-secondary mb-2','mb-1 font-weight-bold text-dark','Вениамин Редакторович','Лады','text-secondary','5 минут назад','d-flex messages-wrapper')
-      +chat-messages("images/avatar_1.jpg",'d-flex flex-column bg-primary p-4 rounded chat-message','text-light mb-2','d-none','','А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие','text-gray','3 минуты назад','d-flex ml-xl-auto messages-wrapper')
-      +chat-messages("images/avatar_4.jpg",'d-flex flex-column bg-light p-4 rounded chat-message','text-secondary mb-2','mb-1 font-weight-bold text-dark','Вениамин Редакторович','о_О','text-secondary','Только что','d-flex messages-wrapper')
+      li.d-flex.messages-item
+        div(class='d-flex messages-wrapper')
+          img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50").rounded-circle.d-xl-block.d-none.mr-3.mt-auto
+          div(class='d-flex flex-column bg-light p-4 rounded chat-message')
+            p(class='mb-1 font-weight-bold text-dark') Вениамин Редакторович
+            p(class='text-secondary mb-2') Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?
+            hr.mt-0.mb-1.border-light.w-100
+            small(class='text-secondary') 8 минут назад
+      li.d-flex.messages-item
+        div(class='d-flex ml-xl-auto messages-wrapper')
+          img(src="images/avatar_1.jpg", alt="avatar" width="50" height="50").rounded-circle.d-xl-block.d-none.mr-3.mt-auto
+          div(class='d-flex flex-column bg-primary p-4 rounded chat-message')
+            p(class='text-light mb-2') Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень
+            hr.mt-0.mb-1.border-light.w-100
+            small(class='text-gray') 5 минут назад
+      li.d-flex.messages-item
+        div(class='d-flex messages-wrapper')
+          img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50").rounded-circle.d-xl-block.d-none.mr-3.mt-auto
+          div(class='d-flex flex-column bg-light p-4 rounded chat-message')
+            p(class='mb-1 font-weight-bold text-dark') Вениамин Редакторович
+            p(class='text-secondary mb-2') Лады
+            hr.mt-0.mb-1.border-light.w-100
+            small(class='text-secondary') 5 минут назад
+      li.d-flex.messages-item
+        div(class='d-flex ml-xl-auto messages-wrapper')
+          img(src="images/avatar_1.jpg", alt="avatar" width="50" height="50").rounded-circle.d-xl-block.d-none.mr-3.mt-auto
+          div(class='d-flex flex-column bg-primary p-4 rounded chat-message')
+            p(class='text-light mb-2') А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие
+            hr.mt-0.mb-1.border-light.w-100
+            small(class='text-gray') 3 минуты назад
+      li.d-flex.messages-item
+        div(class='d-flex messages-wrapper')
+          img(src="images/avatar_4.jpg", alt="avatar" width="50" height="50").rounded-circle.d-xl-block.d-none.mr-3.mt-auto
+          div(class='d-flex flex-column bg-light p-4 rounded chat-message')
+            p(class='mb-1 font-weight-bold text-dark') Вениамин Редакторович
+            p(class='text-secondary mb-2') о_О
+            hr.mt-0.mb-1.border-light.w-100
+            small(class='text-secondary') Только что
     form.ml-xl-5.messages-form.px-xl-0.d-flex.justify-content-between.align-items-center.border-top
       input(type="text" placeholder="Напишите сообщение...").mt-xl-4.border-0.messages-input
       button(type="submit").rounded-circle.bg-primary.border-0.chat-btn.mt-xl-3
