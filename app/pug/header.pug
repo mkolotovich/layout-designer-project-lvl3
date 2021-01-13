@@ -3,7 +3,7 @@ mixin header(link, classes)
     a(href=link).pt-4.header-link
       img(src="images/icons/sprite.svg#images--icons--logo", alt="logo" width="15")
     nav.ml-auto
-      ul.nav.align-items-center.pr-3(id="pills-tab" role="tablist")
+      ul.nav.align-items-center.pr-3( role="tablist")
         if page == 'chat'
           li.nav-item.d-xl-none(role="presentation")
             a(data-toggle="pill" href="#current-chat" role="tab" aria-controls="contacts" aria-selected="true").nav-link
@@ -13,10 +13,10 @@ mixin header(link, classes)
             img(src="images/icons/sprite.svg#images--icons--people", alt="contacts" width="25").mr-2
             |Контакты
         li(role="presentation")
-          a(id="pills-profile-tab" data-toggle="pill" href="#chats" role="tab" aria-controls="chats" aria-selected="false").px-3.d-flex.align-items-center.header-nav-link.text-light
+          a(data-toggle="pill" href="#chats" role="tab" aria-controls="chats" aria-selected="false").px-3.d-flex.align-items-center.header-nav-link.text-light
             img(src="images/icons/sprite.svg#images--icons--chat", alt="messages" width="25").mr-2
             |Сообщения
         li(role="presentation")
-          a(id="pills-contact-tab" data-toggle="pill" href="#profile" role="tab" aria-controls="profile" aria-selected="false").px-3.d-flex.align-items-center.header-nav-link.text-light
+          a(data-toggle="pill" href="#profile" role="tab" aria-controls="profile" aria-selected="false").px-3.d-flex.align-items-center.header-nav-link.text-light
             img(src="images/icons/sprite.svg#images--icons--person", alt="profile" width="25").mr-2
             |Профиль
